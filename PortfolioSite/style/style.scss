@@ -2,6 +2,7 @@
 $title-font: 'Abril Fatface', serif;
 $text-font: 'Montserrat', sans-serif;
 $light-font: 'Montserrat Light', sans-serif;
+$bold-font: 'Montserrat Bold', sans-serif;
 
 $primary-color: #474844;
 $secondary-color: #FFF2D2;
@@ -22,7 +23,7 @@ $text-size: 1.2em;
 }
 
 @font-face {
-    font-family: 'Montserrat Light';
+    font-family: 'Montserrat Bold';
     src:  url('fonts/mbold.ttf') format('truetype');
     font-display: swap;
 }
@@ -108,6 +109,8 @@ nav{
     align-items: center;
     padding-top: 2vh;
 
+    cursor: pointer;
+
     z-index: 100;
 
     #ham{
@@ -120,11 +123,44 @@ nav{
         margin-left: 5vw;
     }
 
+
+
+}
+
+aside{
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100vh;
+    width: 65vw;
+    // width: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 500;
+
+    // display: none;
     a{
-        display: none;
         font-size: 1em;
         margin-left: 4vw;
         text-decoration: none;
-    }
+        background:none;
+        color: rgba($color: #ffffff, $alpha: 0.9);
+        // font-weight: bold;
+        font-family: $bold-font;
+        font-weight: 600;
 
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    ul{
+        background:none;
+        li{
+            background:none;
+            margin-bottom: 2rem;
+
+        }
+        &:first-child{
+            margin-top: 2rem;
+        }
+    }
 }

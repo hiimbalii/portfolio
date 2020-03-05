@@ -16,23 +16,28 @@
 
 <body>
     <nav>
-        <h1 data-lax-opacity="0 0, (document.getElementById('home').scrollHeight*0.37-1) 0,(document.getElementById('home').scrollHeight*0.37) 1" id="navbar-logo" class="lax">tbalazs.dev</h1>
-        <img src="pics/hamburger.png" alt="Hamburger menu icon" id="ham">
-        <a href="#home">Kezdőlap</a>
-        <a href="/blog">Blog</a>
-        <a href="#contact">Kapcsolat</a>
-    </nav>
+        <h1 data-lax-opacity="0 0, (document.getElementById('home').scrollHeight*0.37-1) 0,(document.getElementById('home').scrollHeight*0.37) 1"
+            id="navbar-logo" class="lax">tbalazs.dev</h1>
+        <a><img src="pics/hamburger.png" alt="Hamburger menu icon" id="ham"></a>
 
+    </nav>
+    <aside>
+        <ul>
+            <li><a href="#home">Kezdőlap</a></li>
+            <li><a href="#about">Rólam</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="#contact">Kapcsolat</a></li>
+        </ul>
+
+    </aside>
 
     <section class="hero" id="home">
         <span id="balfaszvagyokehhez"></span>
         <div id="logo">
-            <h1 class="title lax" 
-            data-lax-scale="0 1, (document.getElementById('home').scrollHeight*0.5) 0"
-            >tbalazs.dev</h1>
-            <h2 
-            data-lax-opacity="0 1, (document.getElementById('home').scrollHeight*0.45) 0|speed=2"
-            class="subtitle lax">webfejlesztés - design - devops</h2>
+            <h1 class="title lax" data-lax-scale="0 1, (document.getElementById('home').scrollHeight*0.5) 0">tbalazs.dev
+            </h1>
+            <h2 data-lax-opacity="0 1, (document.getElementById('home').scrollHeight*0.45) 0|speed=2"
+                class="subtitle lax">webfejlesztés - design - devops</h2>
         </div>
         <div id="navigator">
             <a href="#about">
@@ -46,10 +51,15 @@
             Üdv!
         </h1>
         <p>
-            Tóth Balázs vagyok, és weboldalakat, webes applikációkat tervezek, készítek és felügyelek. Erre van szüksége? Dolgozzunk együtt!
+            Tóth Balázs vagyok, és weboldalakat, webes applikációkat tervezek, készítek és felügyelek. Erre van
+            szüksége? Dolgozzunk együtt!
         </p>
         <h2 class="subtitle">Rólam</h2>
-        <p><img src="pics/headshot.jpg" alt="Kép rólam"> Győrben születtem, és azóta is itt élek, bár szerencsére sokat volt alkalmam utazni. <br>Már fiatal koromban is nagyon érdekelt az informatika, amit 4 éve tanulok a győri Jedlik Ányos Szakgimázimban, a szaktárgyakból kiemelkedő eredménnyel. 2019 nyarán az Audi Hungáriánál volt alkalmam tanulni és dolgozn. <br>Már korán rájöttem, hogy az interneten van a jövő, ezért főleg a webes applikációkra fókuszáltam, de az asztali alkalmazásokkal sem gyűlik meg a bajom.</p>
+        <p><img src="pics/headshot.jpg" alt="Kép rólam"> Győrben születtem, és azóta is itt élek, bár szerencsére sokat
+            volt alkalmam utazni. <br>Már fiatal koromban is nagyon érdekelt az informatika, amit 4 éve tanulok a győri
+            Jedlik Ányos Szakgimázimban, a szaktárgyakból kiemelkedő eredménnyel. 2019 nyarán az Audi Hungáriánál volt
+            alkalmam tanulni és dolgozn. <br>Már korán rájöttem, hogy az interneten van a jövő, ezért főleg a webes
+            applikációkra fókuszáltam, de az asztali alkalmazásokkal sem gyűlik meg a bajom.</p>
         <h2 class="subtitle">Eddigi munkáim</h2>
         <p>Valami</p>
         <br>
@@ -83,7 +93,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
     <script src="js/main.js"></script>
 </body>
 

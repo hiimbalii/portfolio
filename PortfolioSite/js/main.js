@@ -1,11 +1,19 @@
-// $(window).scroll(function(){
-//     if ($('#logo').visible(true)) {
-//         $('#navbar-logo').toggle()
-//     } else {
-//         // The element is NOT visible, do something else
-//     }
-//     console.log("scroll")
-// })
+//hamburger
+$("#ham").click(()=>{
+	// $("aside").show(700)
+	$("aside").animate({width:'65vw'},250);
+})
+$(document).click(function(e){
+
+    // Check if click was triggered on or within #menu_content
+    if( $(e.target).closest("#ham").length > 0 ) {
+        return false;
+    }
+	$("aside").animate({width:'0'},250);
+
+    // Otherwise
+    // trigger your click function
+});
 
 //laxxx
 window.onload = function () {
