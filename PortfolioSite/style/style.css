@@ -23,6 +23,8 @@
   font-family: "Montserrat", sans-serif !important;
   font-size: 1.2em;
   font-weight: 400;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .title {
@@ -125,7 +127,7 @@ aside {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 65vw;
+  width: 0;
   background-color: rgba(0, 0, 0, 0.65);
   z-index: 500;
 }
@@ -136,12 +138,12 @@ aside a {
   text-decoration: none;
   background: none;
   color: rgba(255, 255, 255, 0.9);
-  font-family: "Montserrat Bold", sans-serif;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
 }
 
 aside a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 aside ul {
