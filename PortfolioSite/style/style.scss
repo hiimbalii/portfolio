@@ -37,7 +37,7 @@ $text-size: 1.2em;
 
 }
 .lax{
-    transform-origin: top left;
+    transform-origin: center left;
 
 }
 
@@ -45,7 +45,6 @@ $text-size: 1.2em;
     font-family: $title-font !important;
     font-weight: 300;
     font-size: $title-size;
-    transform-origin: top left;
     // margin-left: 3vw
 }
 
@@ -63,7 +62,6 @@ $text-size: 1.2em;
         font-size: $text-size;
         font-weight: 100;
         // margin-left: 3vw;
-        transform-origin: top left;
     }
 
     #navigator{
@@ -85,8 +83,10 @@ $text-size: 1.2em;
         font-weight: 300;
         font-size: 2em;
         // margin-left: 3vw;
+        // margin-top: 1em;
+        background: none;
     }
-    
+
     p{
         font-size: $text-size;
         font-weight: 100;

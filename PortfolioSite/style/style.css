@@ -26,16 +26,14 @@
 }
 
 .lax {
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
 }
 
 .title {
   font-family: "Abril Fatface", serif !important;
   font-weight: 300;
   font-size: 4em;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
 }
 
 .hero {
@@ -58,8 +56,6 @@
 .hero .subtitle {
   font-size: 1.2em;
   font-weight: 100;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
 }
 
 .hero #navigator {
@@ -80,6 +76,7 @@
   font-family: "Abril Fatface", serif !important;
   font-weight: 300;
   font-size: 2em;
+  background: none;
 }
 
 .aboutme p {
