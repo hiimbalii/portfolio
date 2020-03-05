@@ -34,6 +34,9 @@ $text-size: 1.2em;
     font-family: $text-font !important;
     font-size: $text-size;
     font-weight: 400;
+
+}
+.lax{
     transform-origin: top left;
 
 }
@@ -101,6 +104,8 @@ $text-size: 1.2em;
     }
 }
 
+
+//navi és hambi
 nav{
     position: fixed;
     width: 100vw;

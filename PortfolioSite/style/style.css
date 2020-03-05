@@ -23,6 +23,9 @@
   font-family: "Montserrat", sans-serif !important;
   font-size: 1.2em;
   font-weight: 400;
+}
+
+.lax {
   -webkit-transform-origin: top left;
           transform-origin: top left;
 }
