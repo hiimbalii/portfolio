@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,400,800&display=swap&subset=latin-ext");
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("fonts/mlight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/mnormal.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("fonts/mbold.ttf") format("truetype");
+}
+* {
+  background-color: #FFF2D2;
+  color: #474844;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.title {
+  font-family: "Abril Fatface", serif !important;
+  font-weight: 300;
+  font-size: 4em;
+  margin-left: 3vw;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.hero .subtitle {
+  font-size: 1.2em;
+  font-weight: 100;
+  margin-left: 3vw;
+}
+.hero #navigator {
+  text-align: center;
+}
+.hero a {
+  text-decoration: none;
+}
+
+.aboutme {
+  padding-top: 5vh;
+  height: 100vh;
+}
+.aboutme .subtitle {
+  font-family: "Abril Fatface", serif !important;
+  font-weight: 300;
+  font-size: 2em;
+  margin-left: 3vw;
+}
+.aboutme p {
+  font-size: 1.2em;
+  font-weight: 100;
+  margin-left: 3vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2vh;
+}
+nav #ham {
+  height: 5vh;
+  margin-right: 5vw;
+}
+nav h1 {
+  font-family: "Abril Fatface", serif !important;
+  margin-left: 5vw;
+}
+nav a {
+  display: none;
+  font-size: 1em;
+  margin-left: 4vw;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

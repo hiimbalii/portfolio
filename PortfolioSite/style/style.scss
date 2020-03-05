@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,400,800&display=swap&subset=latin-ext');
+$title-font: 'Abril Fatface', serif;
+$text-font: 'Montserrat', sans-serif;
+$light-font: 'Montserrat Light', sans-serif;
+
+$primary-color: #474844;
+$secondary-color: #FFF2D2;
+
+$title-size: 4em;
+$text-size: 1.2em;
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src:  url('fonts/mlight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:  url('fonts/mnormal.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src:  url('fonts/mbold.ttf') format('truetype');
+}
+
+*{
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-family: $text-font !important;
+    font-size: $text-size;
+    font-weight: 400;
+
+}
+
+.title{
+    font-family: $title-font !important;
+    font-weight: 300;
+    font-size: $title-size;
+    margin-left: 3vw;
+}
+
+.hero{
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+
+    // margin-bottom: 1vh;
+
+    .subtitle{
+        font-size: $text-size;
+        font-weight: 100;
+        margin-left: 3vw;
+    }
+
+    #navigator{
+        text-align: center;
+        // margin-bottom: 5vh;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+.aboutme{
+    padding-top: 5vh;
+    height: 100vh;
+
+    .subtitle{
+        font-family: $title-font !important;
+        font-weight: 300;
+        font-size: 2em;
+        margin-left: 3vw;
+    }
+    p{
+        font-size: $text-size;
+        font-weight: 100;
+        margin-left: 3vw;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vh;
+
+    #ham{
+        height: 5vh;
+        margin-right: 5vw;
+    }
+
+    h1{
+        font-family: $title-font !important;
+        margin-left: 5vw;
+    }
+
+    a{
+        display: none;
+        font-size: 1em;
+        margin-left: 4vw;
+        text-decoration: none;
+    }
+
+}
