@@ -2,6 +2,7 @@
 $("#ham").click(()=>{
 	// $("aside").show(700)
 	$("aside").animate({width:'65vw'},250);
+	$("#ham").animate({width:'0'},50);
 })
 $(document).click(function(e){
 
@@ -10,7 +11,7 @@ $(document).click(function(e){
         return false;
     }
 	$("aside").animate({width:'0'},250);
-
+	$("#ham").animate({width:'5vh'},50);
     // Otherwise
     // trigger your click function
 });
