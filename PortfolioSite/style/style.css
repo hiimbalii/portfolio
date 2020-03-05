@@ -26,7 +26,6 @@
   font-family: "Abril Fatface", serif !important;
   font-weight: 300;
   font-size: 4em;
-  margin-left: 3vw;
 }
 
 .hero {
@@ -43,12 +42,12 @@
           justify-content: space-between;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  margin-left: 3vw;
 }
 
 .hero .subtitle {
   font-size: 1.2em;
   font-weight: 100;
-  margin-left: 3vw;
 }
 
 .hero #navigator {
@@ -61,29 +60,29 @@
 
 .aboutme {
   padding-top: 5vh;
+  padding-left: 5vw;
+  padding-right: 3vw;
 }
 
 .aboutme .subtitle {
   font-family: "Abril Fatface", serif !important;
   font-weight: 300;
   font-size: 2em;
-  margin-left: 3vw;
 }
 
 .aboutme p {
   font-size: 1.2em;
   font-weight: 100;
-  margin-left: 3vw;
   margin-top: 1em;
   margin-bottom: 1em;
   float: left;
 }
 
 .aboutme p img {
-  height: 15rem;
+  height: 14rem;
   float: left;
   margin-right: 3vw;
-  margin-bottom: 0em;
+  margin-bottom: 1%;
 }
 
 nav {

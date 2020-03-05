@@ -37,7 +37,7 @@ $text-size: 1.2em;
     font-family: $title-font !important;
     font-weight: 300;
     font-size: $title-size;
-    margin-left: 3vw;
+    // margin-left: 3vw;
 }
 
 .hero{
@@ -47,13 +47,13 @@ $text-size: 1.2em;
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
-
+    margin-left: 3vw;
     // margin-bottom: 1vh;
 
     .subtitle{
         font-size: $text-size;
         font-weight: 100;
-        margin-left: 3vw;
+        // margin-left: 3vw;
     }
 
     #navigator{
@@ -68,26 +68,28 @@ $text-size: 1.2em;
 .aboutme{
     padding-top: 5vh;
     // height: 100vh;
-
+    padding-left: 5vw;
+    padding-right: 3vw;
     .subtitle{
         font-family: $title-font !important;
         font-weight: 300;
         font-size: 2em;
-        margin-left: 3vw;
+        // margin-left: 3vw;
     }
+    
     p{
         font-size: $text-size;
         font-weight: 100;
-        margin-left: 3vw;
+        // margin-left: 3vw;
         margin-top: 1em;
         margin-bottom: 1em;
         float:left;
         img{
             // width: 45%;
-            height: 15rem;
+            height: 14rem;
             float:left;
             margin-right: 3vw;
-            margin-bottom: 0em;
+            margin-bottom: 1%;
         }
     }
 }
