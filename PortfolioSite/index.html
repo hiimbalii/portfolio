@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff2d2">
+    <meta name="Cache-Control" content="public, max-age=900">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tóth Balázs</title>
+    <meta name="description" content="Tóth Balázs, full stack webfejlesztő, designer, devops">
+    <title>Tóth Balázs - tbalazs.dev</title>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel='manifest' href='manifest.json'>
 </head>
 
 <body>
     <nav>
-        <h1 id="navbar-logo">tbalazs.dev</h1>
+        <h1 data-lax-opacity="0 0, (document.getElementById('home').scrollHeight*0.37-1) 0,(document.getElementById('home').scrollHeight*0.37) 1" id="navbar-logo" class="lax">tbalazs.dev</h1>
         <img src="pics/hamburger.png" alt="Hamburger menu icon" id="ham">
         <a href="#home">Kezdőlap</a>
         <a href="/blog">Blog</a>
@@ -23,8 +27,12 @@
     <section class="hero" id="home">
         <span id="balfaszvagyokehhez"></span>
         <div id="logo">
-            <h1 class="title">tbalazs.dev</h1>
-            <h2 class="subtitle">webfejlesztés - design - devops</h2>
+            <h1 class="title lax" 
+            data-lax-scale="0 1, (document.getElementById('home').scrollHeight*0.5) 0"
+            >tbalazs.dev</h1>
+            <h2 
+            data-lax-opacity="0 1, (document.getElementById('home').scrollHeight*0.45) 0|speed=2"
+            class="subtitle lax">webfejlesztés - design - devops</h2>
         </div>
         <div id="navigator">
             <a href="#about">
@@ -75,6 +83,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
     <script src="js/main.js"></script>
 </body>
 

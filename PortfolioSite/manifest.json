@@ -1,0 +1,15 @@
+{
+	"name" : "Tóth Balázs - tbalazs.dev",
+	"short_name" : "Tóth Balázs",
+	"description" : "Tóth Balázs fullstack webdevelopment, design and devops",
+	"start_url" : "/",
+    "lang" : "Hungarian",
+    "background_color": "#fff2d2",
+	"theme_color": "#fff2d2",
+	"display":"fullscreen",
+	"icons": [
+		{
+		  "src": "pics/goat.png",
+		  "sizes": "512x512"		}
+	  ]
+}

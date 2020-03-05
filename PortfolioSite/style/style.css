@@ -2,16 +2,19 @@
 @font-face {
   font-family: 'Montserrat Light';
   src: url("fonts/mlight.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   src: url("fonts/mnormal.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat Light';
   src: url("fonts/mbold.ttf") format("truetype");
+  font-display: swap;
 }
 
 * {
@@ -26,6 +29,8 @@
   font-family: "Abril Fatface", serif !important;
   font-weight: 300;
   font-size: 4em;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .hero {
@@ -48,6 +53,8 @@
 .hero .subtitle {
   font-size: 1.2em;
   font-weight: 100;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 .hero #navigator {
@@ -99,6 +106,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 2vh;
+  z-index: 100;
 }
 
 nav #ham {

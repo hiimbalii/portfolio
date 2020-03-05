@@ -12,16 +12,19 @@ $text-size: 1.2em;
 @font-face {
     font-family: 'Montserrat Light';
     src:  url('fonts/mlight.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat';
     src:  url('fonts/mnormal.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Montserrat Light';
     src:  url('fonts/mbold.ttf') format('truetype');
+    font-display: swap;
 }
 
 *{
@@ -37,7 +40,8 @@ $text-size: 1.2em;
     font-family: $title-font !important;
     font-weight: 300;
     font-size: $title-size;
-    // margin-left: 3vw;
+    transform-origin: top left;
+    // margin-left: 3vw
 }
 
 .hero{
@@ -54,6 +58,7 @@ $text-size: 1.2em;
         font-size: $text-size;
         font-weight: 100;
         // margin-left: 3vw;
+        transform-origin: top left;
     }
 
     #navigator{
@@ -102,6 +107,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding-top: 2vh;
+
+    z-index: 100;
 
     #ham{
         height: 5vh;

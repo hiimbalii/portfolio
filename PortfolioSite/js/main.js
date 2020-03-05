@@ -1,8 +1,41 @@
-$(window).scroll(function(){
-    if ($('#logo').visible(true)) {
-        $('#navbar-logo').toggle()
-    } else {
-        // The element is NOT visible, do something else
-    }
-    console.log("scroll")
-})
+// $(window).scroll(function(){
+//     if ($('#logo').visible(true)) {
+//         $('#navbar-logo').toggle()
+//     } else {
+//         // The element is NOT visible, do something else
+//     }
+//     console.log("scroll")
+// })
+
+//laxxx
+window.onload = function () {
+	lax.setup() // init
+
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
+
+// This is the "Offline copy of pages" service worker
+
+// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+// Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+	if (navigator.serviceWorker.controller) {
+	  console.log("[PWA Builder] active service worker found, no need to register");
+	} else {
+	  // Register the service worker
+	  navigator.serviceWorker
+		.register("sw.js", {
+		  scope: "./"
+		})
+		.then(function (reg) {
+		  console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+		});
+	}
+  }
+  
