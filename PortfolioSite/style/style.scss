@@ -145,6 +145,7 @@ $text-size: 1.2em;
         .description{
             grid-area: desc;
             border-left: 1px solid $primary-color;
+            padding-top: 3vw;
             padding-left: 5vw;
             p{
                 font-size: 0.9em;
@@ -164,7 +165,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding-top: 2vh;
-    padding-bottom: 1vh;
+    padding-bottom: 1.5vh;
 
     cursor: pointer;
 
