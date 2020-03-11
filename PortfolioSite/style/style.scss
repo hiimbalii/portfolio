@@ -85,6 +85,7 @@ $text-size: 1.2em;
         // margin-left: 3vw;
         // margin-top: 1em;
         background: none;
+        
     }
 
     p{
@@ -102,6 +103,55 @@ $text-size: 1.2em;
             margin-bottom: 1%;
         }
     }
+
+    //Eddigi munkák
+    article{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "mainimg mainimg"
+        "txt txt"
+        "icons desc";
+        img{
+            width: 98%;
+        }
+
+        .main-img{
+            grid-area: mainimg;
+        }
+        section{
+            grid-area: txt;
+            h3{
+                font-family: $title-font !important;
+                font-size: 1.7em;
+            }
+            p{
+                font-size: 1.1em;
+            }
+            margin-bottom: 1vh;
+        }
+        .icons{
+            grid-area: icons;
+            display:flex;
+            align-items: center;
+            img{
+                width: (75%/4);
+                margin-right: 3vw;
+            }
+
+        }
+        .description{
+            grid-area: desc;
+            border-left: 1px solid $primary-color;
+            padding-left: 5vw;
+            p{
+                font-size: 0.9em;
+                margin: 0.1vh;
+            }
+        }
+    }
 }
 
 
@@ -114,6 +164,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding-top: 2vh;
+    padding-bottom: 1vh;
 
     cursor: pointer;
 
