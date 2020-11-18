@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Montserrat Light';
+    src:  url('mlight.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:  url('mnormal.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src:  url('mbold.ttf') format('truetype');
+    font-display: swap;
+}

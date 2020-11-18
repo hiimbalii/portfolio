@@ -34,17 +34,53 @@ window.onload = function () {
 
 // Check compatibility for the browser we're running this in
 if ("serviceWorker" in navigator) {
-	if (navigator.serviceWorker.controller) {
-	  console.log("[PWA Builder] active service worker found, no need to register");
-	} else {
+	// if (navigator.serviceWorker.controller) {
+	//   console.log("Van aktív serviceworker, nem regisztrálok újat!");
+	// } else {
 	  // Register the service worker
 	  navigator.serviceWorker
 		.register("sw.js", {
 		  scope: "./"
 		})
 		.then(function (reg) {
-		  console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+		  console.log("Új serviceworker regisztrálva:  " + reg.scope);
 		});
-	}
+	// }
   }
   
+  ///hammer
+
+  var hammertime = new Hammer(document.getElementById('body'));
+
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  hammertime.on('swipe', function(ev) {
+	  console.log(ev.direction);
+	  if(ev.direction===2){
+		$("aside").animate({width:'65vw'},250);
+		$("#ham").animate({width:'0'},50);
+	  }else if(ev.direction===4){
+		$("aside").animate({width:'0'},250);
+		$("#ham").animate({width:'5vh'},50);
+	  }
+  });
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+function copy(){
+	navigator.clipboard.writeText("info@tbalazs.dev")
+	toggleCopy()
+}
+
+function toggleCopy(){
+	$("#emailCopy").toggle(300);
+}
+$("#emailCopy").hide();

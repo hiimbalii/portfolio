@@ -1,0 +1,24 @@
+@import '../styles/variables';
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-left: 3vw;
+}
+
+.skip{
+    text-align: center;
+}
+
+.title{
+    font-family: $title-font !important;
+    font-weight: 300;
+    font-size: $title-size;
+}
+.motto{
+    font-size: $text-size;
+    font-weight: 100;
+}

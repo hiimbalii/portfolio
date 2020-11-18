@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Montserrat Light';
+    src:  url('../fonts/mlight.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:  url('../fonts/mnormal.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src:  url('../fonts/mbold.ttf') format('truetype');
+    font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,400,800&display=swap&subset=latin-ext');
+
+@import 'variables';
+
+*{
+    font-family: $text-font !important;
+    // font-size: $text-size;
+    font-weight: 400;
+
+    color: $primary-color;
+}
+
+
+.subtitle{
+    font-family: $title-font !important;
+    font-weight: 300;
+    font-size: 2em;
+    background: none;   
+}
+a{
+    text-decoration: none;
+}
+// strong{
+//     font-weight: bold;
+// }

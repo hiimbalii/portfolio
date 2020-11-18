@@ -1,28 +1,35 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,400,800&display=swap&subset=latin-ext");
 @font-face {
-  font-family: 'Montserrat Light';
+  font-family: "Montserrat Light";
   src: url("fonts/mlight.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("fonts/mnormal.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat Bold';
+  font-family: "Montserrat Bold";
   src: url("fonts/mbold.ttf") format("truetype");
   font-display: swap;
 }
 
 * {
-  background-color: #FFF2D2;
+  background-color: #fff2d2;
   color: #474844;
   font-family: "Montserrat", sans-serif !important;
   font-size: 1.2em;
   font-weight: 400;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lax {
@@ -30,9 +37,18 @@
           transform-origin: center left;
 }
 
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .title {
   font-family: "Abril Fatface", serif !important;
-  font-weight: 300;
+  font-weight: 299;
   font-size: 4em;
 }
 
@@ -64,6 +80,24 @@
 
 .hero a {
   text-decoration: none;
+}
+
+#about:before {
+  content: "";
+  display: block;
+  padding-top: 5vh;
+  /* header height + empty space */
+  margin-top: 0vh;
+  /* header height to degrees padding’s space */
+}
+
+#contact:before {
+  content: "";
+  display: block;
+  padding-top: 5vh;
+  /* header height + empty space */
+  margin-top: 7vh;
+  /* header height to degrees padding’s space */
 }
 
 .aboutme {
@@ -103,6 +137,14 @@
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
       grid-template-areas: "mainimg mainimg" "txt txt" "icons desc";
+}
+
+@media only screen and (min-width: 600px) {
+  .aboutme article {
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "mainimg txt icons" "mainimg txt desc";
+  }
 }
 
 .aboutme article img {
@@ -150,9 +192,20 @@
   margin-right: 3vw;
 }
 
+@media only screen and (min-width: 600px) {
+  .aboutme article .icons {
+    border-left: 1px solid #474844;
+  }
+  .aboutme article .icons img {
+    margin-right: 1vw;
+    width: 12.5%;
+    padding-left: 1vw;
+  }
+}
+
 .aboutme article .description {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: desc;
   border-left: 1px solid #474844;
   padding-top: 3vw;
@@ -162,6 +215,241 @@
 .aboutme article .description p {
   font-size: 0.9em;
   margin: 0.1vh;
+}
+
+@media only screen and (min-width: 600px) {
+  .aboutme article .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 1vw;
+    padding-top: 1vh;
+  }
+  .aboutme article .description p {
+    font-size: 0.9em;
+    margin: 1vh;
+  }
+}
+
+.contact {
+  /* reset input */
+}
+
+.contact h2 {
+  font-family: "Abril Fatface", serif !important;
+  font-weight: 300;
+  font-size: 2em;
+  background: none;
+}
+
+.contact .button {
+  background: none;
+  text-decoration: none;
+  display: inline-block;
+  color: #474844;
+  line-height: 1.2;
+  padding: 5px 50px;
+  border-radius: 60px;
+  min-width: 60px;
+  text-align: center;
+  font-weight: normal;
+  border: 1px solid #474844;
+  position: relative;
+  vertical-align: middle;
+  z-index: 3;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 18vw;
+}
+
+.contact .button:before {
+  border-radius: 60px;
+  content: "";
+  position: absolute;
+  z-index: -2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff2d2;
+}
+
+.contact .button:after {
+  border-radius: 60px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #474844;
+}
+
+.contact .button:hover, .contact .button:active, .contact .button:focus {
+  color: #fff2d2;
+  cursor: pointer;
+}
+
+.contact .button:hover:after, .contact .button:active:after, .contact .button:focus:after {
+  width: 100%;
+}
+
+.contact .contactgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "form" "desc";
+}
+
+.contact .contactgrid .form {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: form;
+  margin-left: 5vw;
+}
+
+.contact .contactgrid .info {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  margin-left: 5vw;
+}
+
+@media only screen and (min-width: 600px) {
+  .contact .contactgrid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "form desc";
+  }
+  .contact .contactgrid .info {
+    margin-left: 5vw;
+  }
+}
+
+.contact .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 90vw;
+}
+
+.contact .form__field {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #474844;
+  outline: 0;
+  font-size: 1.2em;
+  color: #474844;
+  padding: 7px 0;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.contact .form__field::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.contact .form__field:-ms-input-placeholder {
+  color: transparent;
+}
+
+.contact .form__field::-ms-input-placeholder {
+  color: transparent;
+}
+
+.contact .form__field::placeholder {
+  color: transparent;
+}
+
+.contact .form__field:placeholder-shown ~ .form__label {
+  font-size: 1.2em;
+  cursor: text;
+  top: 25px;
+}
+
+.contact .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 0.9em;
+  color: #474844;
+}
+
+.contact .form__field:focus {
+  padding-bottom: 6px;
+  border-width: 1px;
+  border-color: #474844;
+}
+
+.contact .form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 0.9em;
+  color: #474844;
+}
+
+.contact .form__field:required, .contact .form__field:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .contact .form {
+    margin-left: 6vw;
+    width: 35vw !important;
+    overflow: hidden;
+  }
+  .contact .form__field {
+    width: 30vw !important;
+  }
+  .contact button {
+    margin-left: 18vw;
+  }
+}
+
+.contact input:-webkit-autofill,
+.contact input:-webkit-autofill:hover,
+.contact input:-webkit-autofill:focus,
+.contact textarea:-webkit-autofill,
+.contact textarea:-webkit-autofill:hover,
+.contact textarea:-webkit-autofill:focus,
+.contact select:-webkit-autofill,
+.contact select:-webkit-autofill:hover,
+.contact select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #474844;
+  -webkit-box-shadow: 0 0 0px 1000px #fff2d2 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact ul {
+  margin-top: 3vh;
+}
+
+@media only screen and (min-width: 600px) {
+  .contact ul {
+    margin-top: 5vh;
+  }
+}
+
+.contact ul li {
+  margin-top: 0.5em;
 }
 
 nav {
@@ -191,6 +479,29 @@ nav #ham {
 nav h1 {
   font-family: "Abril Fatface", serif !important;
   margin-left: 5vw;
+}
+
+nav ul {
+  display: none;
+  margin-right: 5vw;
+}
+
+nav ul a {
+  text-decoration: none;
+  padding-right: 1vw;
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width: 600px) {
+  nav #ham {
+    display: none;
+  }
+  nav ul {
+    display: inline-block;
+  }
+  nav ul li {
+    display: inline-block;
+  }
 }
 
 aside {
@@ -228,5 +539,31 @@ aside ul li {
 
 aside ul:first-child {
   margin-top: 2rem;
+}
+
+footer {
+  background-color: #474844;
+  color: #fff2d2;
+  height: 15vh;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+footer span {
+  position: relative;
+  top: 5vh;
+  color: inherit;
+  background-color: inherit;
+  line-height: 1.2rem;
+}
+
+hr {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border: 0;
+  z-index: 99;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 /*# sourceMappingURL=style.css.map */
